@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day9</title>
+</head>
+<body>
+  <div id="task1">Hi there, My name is Vyom.</div>
+  <div class="task2">I am a Developer.</div>
+  <ul class="list">
+    <li>Skills that I know:</li>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+  </ul>
+
+  <p class="delete">This line will be removed.</p>
+
+  <ol class="child">
+    <li>EEny</li>
+    <li>meeny</li>
+    <li>Miney mo</li>
+  </ol>
+
+  <script>
+    const task1 = document.getElementById("task1");
+    task1.textContent="Hi there, My name is Yash";
+
+    const task2 = document.querySelector(".task2")
+    task2.style.backgroundColor= "gray"
+    task2.style.color="white"
+
+    const newElement =document.createElement("div")
+    newElement.textContent="This is a new element appended inside the body."
+    document.body.appendChild(newElement)
+
+    const newListItem = document.createElement("li")
+    newListItem.textContent="ReactJS"
+    document.body.querySelector(".list").appendChild(newListItem)
+
+    document.querySelector(".delete").remove()
+
+    // removing last child of a specific HTML Element.
+
+    const child = document.querySelector(".child")
+
+    if(child.lastElementChild) {
+      child.removeChild(child.lastElementChild);
+    }
+
+  </script>
+</body>
+</html>
