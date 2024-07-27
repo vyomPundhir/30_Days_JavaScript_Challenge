@@ -4,6 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Day9</title>
+  <style>
+    .newClass{
+      background-color: aquamarine;
+      color: rgb(57, 1, 57);
+    }
+  </style>
 </head>
 <body>
   <div id="task1">Hi there, My name is Vyom.</div>
@@ -16,12 +22,16 @@
   </ul>
 
   <p class="delete">This line will be removed.</p>
+  
+  <p id="change">This statement will change on being clicked.</p>
 
   <ol class="child">
-    <li>EEny</li>
+    <li>Eeny</li>
     <li>meeny</li>
     <li>Miney mo</li>
   </ol>
+
+  <img id="img" src="https://plus.unsplash.com/premium_photo-1683865776032-07bf70b0add1?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image1">
 
   <script>
     const task1 = document.getElementById("task1");
@@ -48,6 +58,33 @@
     if(child.lastElementChild) {
       child.removeChild(child.lastElementChild);
     }
+
+    const image1 = document.getElementById("img")
+
+    image1.setAttribute("src","https://images.unsplash.com/photo-1517404215738-15263e9f9178?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+    
+    image1.style.width="100px"
+    image1.style.height="100px"
+
+    document.getElementById("task1").classList.add("newClass")
+    document.getElementById("task1").classList.remove("newClass")
+
+    const change = document.getElementById("change")
+    change.addEventListener("click", function() {
+      change.textContent="The statement is changed."
+    })
+
+    change.addEventListener("mouseover", function(){
+      change.style.borderWidth="1px"
+      change.style.borderColor="red"
+      change.style.borderStyle="solid"
+    })
+
+    change.addEventListener("mouseout", function(){
+      change.style.borderWidth="0px"
+      // change.style.borderColor="red"
+      // change.style.borderStyle="solid"
+    })
 
   </script>
 </body>
