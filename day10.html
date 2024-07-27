@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p id="changeText">
+    This text will change after clicking the button.
+  </p>
+  <button id="btn">
+    Change Text Content
+  </button>
+
+  <script>
+    const changeText = document.getElementById("changeText")
+    document.getElementById("btn").addEventListener("click", function(){
+      changeText.textContent="Button clicked, the text has changed."
+    })
+    
+  </script>
+</body>
+</html>
